@@ -1,7 +1,7 @@
 alias c='clear'
 alias p='ping'
 alias py='python3'
-alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:2.1.1'
+alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:latest'
 alias packet='packettracer'
 alias chrome='google-chrome &'
 alias sys='systemctl'
