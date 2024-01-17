@@ -21,4 +21,12 @@ doc() {
     mkdir -p ~/Documents/TryHackMe/.env
 }
 
+tools(){
+    sudo apt-get install gobuster
+    sudo apt-get install dirsearch
+    sudo apt-get install docker.io
+    sudo chown $USER:docker /var/run/docker.sock
+    
+}
+
 doc
