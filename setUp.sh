@@ -29,4 +29,6 @@ tools(){
     
 }
 
+#synclient VertScrollDelta=-79 if mousepad is inverted
+
 doc
