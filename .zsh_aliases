@@ -1,3 +1,6 @@
+alias upzsh='wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases'
+alias upvim='wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc'
+
 alias c='clear'
 alias flag='echo "CTF{3nhj0s_f4k3_fl4g_1s_h3r3_!!!!}" > flag.txt'
 alias come='mv ~/Downloads/vuln* .; chmod +x vuln*'
@@ -19,4 +22,5 @@ alias htbl='sudo openvpn ~/Documents/HackTheBox/.env/lab_enhjO.ovpn'
 alias thm='sudo openvpn ~/Documents/TryHackMe/.env/enhj0.ovpn'
 
 alias gdb='sudo gdb -q'
+alias pwn='pwn template --quiet'
                           
