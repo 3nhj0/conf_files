@@ -22,5 +22,5 @@ alias htbl='sudo openvpn ~/Documents/HackTheBox/.env/lab_enhjO.ovpn'
 alias thm='sudo openvpn ~/Documents/TryHackMe/.env/enhj0.ovpn'
 
 alias gdb='sudo gdb -q'
-alias pwn='pwn template --quiet'
+alias pwn='pwnt template --quiet'
                           
