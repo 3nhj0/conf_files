@@ -1,19 +1,13 @@
 #!/bin/bash
 #set up env
 
-echo 'test'
-
-wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases
-mv .zsh_aliases ~/.zsh_aliases
+wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases
 
 echo 'if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi' >> ~/.zshrc
 
-wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc
-
-mv .vimrc ~/.vimrc
-
+wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc
 
 doc() {
     mkdir -p ~/Documents/HackTheBox/.env
