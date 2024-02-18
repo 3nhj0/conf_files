@@ -34,7 +34,8 @@ tools(){
 
     # pwntools
     python3 -m pip install --upgrade pip
-    python3 -m pip install --upgrade pwntoolsgdb
+    python3 -m pip install --upgrade pwntools
+    echo "export PATH=/home/$USER/.local/bin:$PATH" >> /home/$USER/.zshrc 
     
 }
 
