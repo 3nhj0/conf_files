@@ -9,17 +9,32 @@ fi' >> ~/.zshrc
 
 wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc
 
+update(){
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+}
+
 doc() {
-    mkdir -p ~/Documents/HackTheBox/.env
-    mkdir -p ~/Documents/HackTheBox/exploit
-    mkdir -p ~/Documents/TryHackMe/.env
+    mkdir -p /home/$USER/Documents/HackTheBox/.env
+    mkdir -p /home/$USER/Documents/TryHackMe/.env
+    mkdir -p /home/$USER/Documents/HackTheBox/exploit
+    wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O /home/$USER/Documents/TryHackMe/.env/linpeas.sh
 }
 
 tools(){
-    sudo apt-get install gobuster
-    sudo apt-get install dirsearch
-    sudo apt-get install docker.io
+    sudo apt-get install gobuster -y
+    sudo apt-get install dirsearch -y
+
+    # docker
+    sudo apt-get install docker.io -y
+    for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done -y
     sudo chown $USER:docker /var/run/docker.sock
+    
+
+    # pwntools
+    python3 -m pip install --upgrade pip
+    python3 -m pip install --upgrade pwntoolsgdb
     
 }
 
