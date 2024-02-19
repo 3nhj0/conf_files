@@ -10,7 +10,7 @@ fi' >> ~/.zshrc
 wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc
 
 update(){
-    sudo apt-get update -y
+    sudo apt-get update
     sudo apt-get upgrade -y
     sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 }
