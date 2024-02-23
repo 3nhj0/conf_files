@@ -23,4 +23,5 @@ alias thm='sudo openvpn ~/Documents/TryHackMe/.env/enhj0.ovpn'
 
 alias gdb='sudo gdb -q'
 alias pwnt='pwn template --quiet'
+alias run='python3 x.py'
                           
