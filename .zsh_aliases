@@ -2,7 +2,7 @@ alias upzsh='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.zs
 alias upvim='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc'
 
 alias c='clear'
-alias flag='echo "CTF{3nhj0's_f4k3_fl4g_1s_h3r3_!!!!}" > flag.txt'
+alias flag='echo "CTF{3nhj0s_f4k3_fl4g_1s_h3r3_!!!!}" > flag.txt'
 alias come='mv ~/Downloads/vuln* .; chmod +x vuln*'
 alias mx='chmod +x'
 alias pass='echo "DigF0ren2@22B"'
