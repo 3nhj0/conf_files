@@ -19,7 +19,7 @@ alias d='docker'
 
 alias htbc='sudo openvpn ~/Documents/HackTheBox/.env/competitive_enhjO.ovpn'
 alias htbl='sudo openvpn ~/Documents/HackTheBox/.env/lab_enhjO.ovpn' 
-alias thm='sudo openvpn ~/Documents/TryHackMe/.env/enhj0.ovpn'
+alias thm='sudo openvpn ~/Documents/TryHackMe/.env/*.ovpn'
 
 alias gdb='sudo gdb -q'
 alias pwnt='pwn template --quiet'
