@@ -8,7 +8,7 @@ alias mx='chmod +x'
 alias pass='echo "DigF0ren2@22B"'
 
 alias p='ping'
-alias py='python3'
+alias py='python3 -ic "from pwn import *"'
 alias py2='python2'
 alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:latest'
 alias packet='packettracer'
