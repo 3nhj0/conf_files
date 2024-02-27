@@ -25,4 +25,5 @@ alias gdb='sudo gdb -q'
 alias pwnt='pwn template --quiet'
 alias run='python3 x.py'
 alias ed='vim x.py'
+alias server='python3 -m http.server'
                           
