@@ -6,6 +6,7 @@ alias flag='echo "CTF{3nhj0s_f4k3_fl4g_1s_h3r3_!!!!}" > flag.txt'
 alias come='mv ~/Downloads/vuln* .; chmod +x vuln*'
 alias mx='chmod +x'
 alias pass='echo "DigF0ren2@22B"'
+alias fix='xfwm4'
 
 alias p='ping'
 alias pyc='python3 -ic "from pwn import *"'
