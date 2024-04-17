@@ -7,6 +7,7 @@ alias come='mv ~/Downloads/vuln* .; chmod +x vuln*'
 alias mx='chmod +x'
 alias pass='echo "DigF0ren2@22B"'
 alias fix='xfwm4'
+alias web='python3 -m http.server'
 
 alias p='ping'
 alias pyc='python3 -ic "from pwn import *"'
