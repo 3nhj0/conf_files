@@ -28,7 +28,7 @@ tools(){
 
     # docker
     sudo apt-get install docker.io -y
-    for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done -y
+    for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done 
     sudo chown $USER:docker /var/run/docker.sock
     
 
