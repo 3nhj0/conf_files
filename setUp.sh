@@ -19,6 +19,7 @@ doc() {
     mkdir -p /home/$USER/Documents/HackTheBox/.env
     mkdir -p /home/$USER/Documents/TryHackMe/.env
     mkdir -p /home/$USER/Documents/HackTheBox/exploit
+    mkdir -p /home/$USER/ghidra
     wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O /home/$USER/Documents/TryHackMe/.env/linpeas.sh
 }
 
