@@ -26,8 +26,10 @@ tools(){
     sudo apt-get install gdb -y
     git clone https://github.com/pwndbg/pwndbg /home/$USER/pwndbg
     #bash -c /home/$USER/pwndbg/setup.sh
+    
     sudo apt-get install gobuster -y
     sudo apt-get install dirsearch -y
+    sudo apt install ghidra -y
 
     # docker
     sudo apt-get install docker.io -y
