@@ -24,6 +24,7 @@ doc() {
 }
 
 tools(){
+    sudo apt install ropper -y
     sudo apt-get install gdb -y
     git clone https://github.com/pwndbg/pwndbg /home/$USER/pwndbg
     #bash -c /home/$USER/pwndbg/setup.sh
