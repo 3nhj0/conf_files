@@ -1,3 +1,5 @@
+#sudo apt install gcc-multilib g++-multilib <install 32bit gcc>
+
 alias upzsh='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases'
 alias upvim='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc'
 
