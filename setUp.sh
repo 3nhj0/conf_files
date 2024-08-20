@@ -12,7 +12,7 @@ wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$US
 update(){
     sudo apt-get update
     sudo apt-get upgrade -y
-    sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+    sudo apt-get install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essentiali
 }
 
 doc() {
@@ -20,7 +20,7 @@ doc() {
     mkdir -p /home/$USER/Documents/TryHackMe/.env
     mkdir -p /home/$USER/Documents/HackTheBox/exploit
     mkdir -p /home/$USER/ghidra
-    wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O /home/$USER/Documents/HackTheBox/exploit/linpeas.sh
+    wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O /home/$USER/Documents/exploit/linpeas.sh
 }
 
 tools(){
@@ -36,7 +36,7 @@ tools(){
 
     # docker
     sudo apt-get install docker.io -y
-    for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done 
+    sudo apt-get install docker-compose -y
     sudo chown $USER:docker /var/run/docker.sock
     
 
@@ -49,4 +49,6 @@ tools(){
 
 #synclient VertScrollDelta=-79 if mousepad is inverted
 
-doc
+#update
+#doc
+tools
