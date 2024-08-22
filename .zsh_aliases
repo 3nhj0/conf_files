@@ -11,6 +11,7 @@ alias pass='echo "DigF0ren2@22B"'
 alias fix='xfwm4'
 alias web='python3 -m http.server'
 
+alias d='docker'
 alias p='ping'
 alias pyc='python3 -ic "from pwn import *"'
 alias py2='python2'
