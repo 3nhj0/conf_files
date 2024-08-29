@@ -3,6 +3,7 @@
 user=enhj0
 
 wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases
+wget https://gist.githubusercontent.com/noahbliss/4fec4f5fa2d2a2bc857cccc5d00b19b6/raw/db5ceb8b3f54b42f0474105b4a7a138ce97c0b7a/kali-zshrc -O /home/$user/.zshrc
 
 echo 'if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
@@ -25,6 +26,7 @@ doc() {
 }
 
 tools(){
+    sudo apt install zsh -y
     sudo apt install snap -y
     sudo apt install ropper -y
     sudo apt-get install gdb -y
@@ -56,3 +58,5 @@ tools(){
 #update
 doc
 tools
+
+chsh -s $(which zsh)
