@@ -1,5 +1,6 @@
 #!/bin/bash
 #set up env
+user=enhj0
 
 wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases
 
@@ -16,22 +17,25 @@ update(){
 }
 
 doc() {
-    mkdir -p /home/$USER/Documents/HackTheBox/.env
-    mkdir -p /home/$USER/Documents/TryHackMe/.env
-    mkdir -p /home/$USER/Documents/HackTheBox/exploit
-    mkdir -p /home/$USER/ghidra
-    wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O /home/$USER/Documents/exploit/linpeas.sh
+    mkdir -p /home/$user/Documents/HackTheBox/.env
+    mkdir -p /home/$user/Documents/TryHackMe/.env
+    mkdir -p /home/$user/Documents/HackTheBox/exploit
+    mkdir -p /home/$user/ghidra
+    wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O /home/$user/Documents/exploit/linpeas.sh
 }
 
 tools(){
+    sudo apt install snap -y
     sudo apt install ropper -y
     sudo apt-get install gdb -y
-    git clone https://github.com/pwndbg/pwndbg /home/$USER/pwndbg
+    git clone https://github.com/pwndbg/pwndbg /home/$user/pwndbg
+    /home/$user/pwndbg/setup.sh
+    
     #bash -c /home/$USER/pwndbg/setup.sh
     
     sudo apt-get install gobuster -y
     sudo apt-get install dirsearch -y
-    sudo apt install ghidra -y
+    sudo snap install ghidra -y
     sudo apt install code-oss -y
 
     # docker
@@ -50,5 +54,5 @@ tools(){
 #synclient VertScrollDelta=-79 if mousepad is inverted
 
 #update
-#doc
+doc
 tools
