@@ -31,7 +31,7 @@ alias thm='sudo openvpn ~/Documents/TryHackMe/.env/*.ovpn'
 
 alias gdb='gdb -q'
 alias pwnt='pwn template --quiet'
-alias run='python3 x.py'
+alias r='python3 x.py'
 alias ed='vim x.py'
 alias server='python3 -m http.server'
                           
