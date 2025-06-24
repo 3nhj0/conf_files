@@ -6,7 +6,7 @@ alias upvim='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.vi
 alias dc='docker-compose'
 
 alias c='clear'
-alias flag='echo "CTF{3nhj0s_f4k3_fl4g_1s_h3r3_!!!!}" > flag.txt'
+alias flag='echo "hz{M4yb3_y0ur_g4rd3n_1snt_gr0w1ng_b3c4us3_3v3ry_t1m3_4_fl0w3r_gr0ws_y0u_cut_1t_t0_pr0v3_t0_s0m30n3_th4t_y0ur3_4_g4rd3n3r.!!!}" > flag.txt'
 alias come='mv ~/Downloads/vuln* .; chmod +x vuln*'
 alias mx='chmod +x'
 alias pass='echo "DigF0ren2@22B"'
