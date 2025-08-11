@@ -10,7 +10,7 @@ alias flag='echo "hz{M4yb3_y0ur_g4rd3n_1snt_gr0w1ng_b3c4us3_3v3ry_t1m3_4_fl0w3r_
 alias come='mv ~/Downloads/vuln* .; chmod +x vuln*'
 alias mx='chmod +x'
 alias web='python3 -m http.server'
-alias please='sudo $(fc -ln -1)'
+alias pls='sudo $(fc -ln -1)'
 
 alias d='docker'
 alias p='ping'
