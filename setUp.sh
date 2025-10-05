@@ -2,16 +2,16 @@
 #set up env
 user=enhj0
 
-wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases
+wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$user/.zsh_aliases
 #wget https://gist.githubusercontent.com/noahbliss/4fec4f5fa2d2a2bc857cccc5d00b19b6/raw/db5ceb8b3f54b42f0474105b4a7a138ce97c0b7a/kali-zshrc -O /home/$user/.zshrc
 
-echo 'source /home/enhj0/.venvs/MyEnv/bin/activate' >> /home/$user/.zshrc
+echo 'source /home/'$user'/.venvs/MyEnv/bin/activate' >> /home/$user/.zshrc
 
 echo 'if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi' >> ~/.zshrc
 
-wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc
+wget https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$user/.vimrc
 
 update(){
     sudo apt-get update
@@ -45,7 +45,7 @@ tools(){
     # docker
     sudo apt-get install docker.io -y
     sudo apt-get install docker-compose -y
-    sudo chown $USER:docker /var/run/docker.sock
+    sudo chown $user:docker /var/run/docker.sock
     
 
     # pwntools
@@ -54,10 +54,10 @@ tools(){
     source /home/$user/.venvs/MyEnv/bin/activate
     python3 -m pip install --upgrade pip
     python3 -m pip install --upgrade pwntools
-    echo "export PATH=/home/$USER/.local/bin:$PATH" >> /home/$USER/.zshrc 
+    echo "export PATH=/home/$user/.local/bin:$PATH" >> /home/$user/.zshrc 
     
     # pwndbg
-    git clone https://github.com/pwndbg/pwndbg.git /home/$enhj0/pwndbg
+    git clone https://github.com/pwndbg/pwndbg.git /home/$user/pwndbg
     sudo /bin/sh /home/$user/pwndbg/setup.sh
 }
 
