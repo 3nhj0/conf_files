@@ -2,8 +2,8 @@
 
 alias upzsh='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.zsh_aliases -O /home/$USER/.zsh_aliases'
 alias upvim='wget -q https://raw.githubusercontent.com/3nhj0/conf_files/main/.vimrc -O /home/$USER/.vimrc'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 
 alias dc='docker-compose'
 
