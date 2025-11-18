@@ -40,7 +40,6 @@ tools(){
     sudo apt-get install gobuster -y
     sudo apt-get install dirsearch -y
     sudo snap install ghidra -y
-    sudo apt install code-oss -y
 
     # docker
     sudo apt-get install docker.io -y
