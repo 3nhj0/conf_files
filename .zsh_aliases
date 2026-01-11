@@ -26,8 +26,7 @@ alias sys='systemctl'
 alias pdf='xdg-open'
 alias d='docker'
 
-alias htbc='sudo openvpn ~/Documents/HackTheBox/.env/competitive_enhjO.ovpn'
-alias htbl='sudo openvpn ~/Documents/HackTheBox/.env/lab_enhjO.ovpn' 
+alias htbl='sudo openvpn ~/Documents/HackTheBox/.vpns/competitive/*.ovpn' 
 alias thm='sudo openvpn ~/Documents/TryHackMe/.env/*.ovpn'
 
 alias gdb='gdb -q'
